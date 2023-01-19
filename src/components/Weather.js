@@ -8,19 +8,24 @@ const Weather = ({ weather }) => {
   let backgroundImg = "";
   switch (weather.weather[0].main.toUpperCase()) {
     case "THUNDERSTORM":
-      backgroundImg = "thunderstorm";
+      backgroundImg =
+        "https://user-images.githubusercontent.com/113860249/213545169-ff49a59b-ae0a-4fb9-af3f-acb9a0161cec";
       break;
     case "SNOW":
-      backgroundImg = "snow";
+      backgroundImg =
+        "https://user-images.githubusercontent.com/113860249/213545089-f2267f07-573b-4b67-86f7-b968d690c52e";
       break;
     case "RAIN":
-      backgroundImg = "rain";
+      backgroundImg =
+        "https://user-images.githubusercontent.com/113860249/213545037-56fecc49-0828-4da6-9be3-800cf5923e59";
       break;
     case "CLOUDS":
-      backgroundImg = "clouds";
+      backgroundImg =
+        "https://user-images.githubusercontent.com/113860249/213544895-8a0bd13e-2446-4c7b-a044-2b7a23814ebd";
       break;
     default:
-      backgroundImg = "clear";
+      backgroundImg =
+        "https://user-images.githubusercontent.com/113860249/213544406-b9a85f86-fb83-400d-b59c-319800a678a3";
   }
   // console.log(weather.weather[0].main.toUpperCase())
   // console.log(backgroundImg)
@@ -29,7 +34,7 @@ const Weather = ({ weather }) => {
     <>
       <div
         className="Weather"
-        style={{ backgroundImage: `url(/${backgroundImg}.jpg)` }}
+        style={{ backgroundImage: `url(${backgroundImg}.jpg)` }}
       >
         <h1 className="Weather-Name">{weather.name.toUpperCase()}</h1>
         <h4 className="Weather-CountryCode">{weather.sys.country}</h4>
